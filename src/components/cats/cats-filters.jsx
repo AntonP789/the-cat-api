@@ -7,7 +7,6 @@ import { removeEmptyStrKey } from 'helpers/object-helpers';
 
 const initState = () => ({
   breed_id: '',
-  page: 1,
   limit: 10,
 });
 
@@ -23,12 +22,12 @@ const CatsFilters = ({ changeFilters, disabled }) => {
   const setHistory = (params) => {
     setSearchParams(removeEmptyStrKey(params));
   };
-``
+
   useEffect(() => {
     const historyState = Object.fromEntries(searchParams);
     const filter = { ...initState(), ...historyState };
     setFilters(filter);
-    changeFilters(historyState);
+    changeFilters(removeEmptyStrKey(filter));
   }, [searchParams]);
 
   return (
