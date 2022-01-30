@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 const StyledTitle = styled.h1`
   font-size: ${(props) => (props.size ? props.size + 'px' : '32px')};
-  text-align: center;
+  color: ${(props) => props.color || 'black'};
+  text-align: ${(props) => props.align || 'center'}
 `;
 
 const Title = (props) => {

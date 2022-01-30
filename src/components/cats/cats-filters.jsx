@@ -27,7 +27,7 @@ const CatsFilters = ({ changeFilters, disabled }) => {
     const historyState = Object.fromEntries(searchParams);
     const filter = { ...initState(), ...historyState };
     setFilters(filter);
-    changeFilters(removeEmptyStrKey(filter));
+    changeFilters(filter);
   }, [searchParams]);
 
   return (
