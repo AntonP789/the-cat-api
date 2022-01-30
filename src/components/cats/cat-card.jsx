@@ -34,9 +34,9 @@ const CardLink = styled.a`
 `;
 
 const TextUnderline = styled.span`
-  border-bottom: solid blue 1px;
+  ${CardLink};
 
-  ${CardLink}
+  border-bottom: solid blue 1px;
 `
 
 const Card = styled.div`
