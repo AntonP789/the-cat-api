@@ -9,9 +9,9 @@ const CardCat = ({ cat }) => {
     <Card>
       <CardLink href={cat.wikipedia_url}>Wikipedia</CardLink>
       <Title size={12}>{cat.description}</Title>
-      <CardLink>
+      <TextUnderline>
         <Link to={`/cat/${cat.id}`}>{cat.name}</Link>
-      </CardLink>
+      </TextUnderline>
     </Card>
   );
 };
@@ -32,6 +32,12 @@ const CardLink = styled.a`
   color: #6a515e;
   text-decoration: underline;
 `;
+
+const TextUnderline = styled.span`
+  border-bottom: solid blue 1px;
+
+  ${CardLink}
+`
 
 const Card = styled.div`
   padding: 20px;
