@@ -7,8 +7,8 @@ const StyledTitle = styled.h1`
   text-align: ${(props) => props.align || 'center'}
 `;
 
-const Title = (props) => {
+const $Title = (props) => {
   return <StyledTitle {...props} />;
 };
 
-export { Title };
+export { $Title };

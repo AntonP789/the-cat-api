@@ -10,8 +10,8 @@ const StyledFlex = styled.div`
   margin: ${(props) => props.margin || 'auto'};
 `;
 
-const Flex = (props) => {
+const $Flex = (props) => {
   return <StyledFlex {...props} />;
 };
 
-export { Flex };
+export { $Flex };

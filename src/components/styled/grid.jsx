@@ -8,8 +8,8 @@ const StyledGrid = styled.div`
   padding: ${(props) => props.padding ? props.padding + 'px' : '0px'};;
 `;
 
-const Grid = (props) => {
+const $Grid = (props) => {
   return <StyledGrid {...props} />;
 };
 
-export { Grid };
+export { $Grid };
